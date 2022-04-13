@@ -1,0 +1,18 @@
+{
+  "name": "drinkinggames",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/plugin-sitemap": "^0.4.0",
+    "@gridsome/source-airtable": "^0.2.0",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-seo": "^1.0.2"
+  },
+  "devDependencies": {
+    "gridsome-plugin-windicss": "^1.0.5"
+  }
+}
