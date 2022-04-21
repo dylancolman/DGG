@@ -58,4 +58,9 @@ h2 {
     display: block;
     border-bottom: 1px solid #666;
 }
+mark {
+  background: #f6dc00;
+  padding: 0 5px;
+  border-radius: 4px;
+}
 </style>

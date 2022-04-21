@@ -16,14 +16,10 @@
         </div>
                   
         <div class="mt-5">
-              <h2>Games in {{ $page.category.name }}</h2>
-              <ul>
-                <li v-for="edge in $page.category.belongsTo.edges" :key="edge.node.id">
-                    <g-link :to="edge.node.path" class="text-white">
-                    {{ edge.node.title }}
-                    </g-link>
-                </li>
-                </ul>
+              <h2 class="text-center"><strong>{{$page.category.belongsTo.totalCount}}</strong> Games in <mark>{{ $page.category.name }}</mark></h2>
+              <div v-if="$page.category.belongsTo.edges">
+                <IndexGrid :data="$page.category.belongsTo.edges" />
+              </div>
         </div>
     </article>
   </Layout>
@@ -58,12 +54,21 @@ query ($id: ID!) {
   category(id: $id) {
     name
     belongsTo {
+      totalCount
       edges {
         node {
           ... on Game {
             id
             name
-            path
+            slug
+            category: categoryText
+            rating
+            description
+            duration
+            rules
+            minPlayers
+            maxPlayers
+            recommendedPlayers
           }
         }
       }

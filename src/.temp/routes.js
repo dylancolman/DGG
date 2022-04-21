@@ -1,8 +1,8 @@
-const c1 = () => import(/* webpackChunkName: "page--src--templates--game-vue" */ "/Users/chris/Sites/drinkinggames/src/templates/Game.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--templates--category-vue" */ "/Users/chris/Sites/drinkinggames/src/templates/Category.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/chris/Sites/drinkinggames/src/pages/About.vue")
-const c4 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/chris/Sites/drinkinggames/node_modules/gridsome/app/pages/404.vue")
-const c5 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/chris/Sites/drinkinggames/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src--templates--game-vue" */ "/home/chris/Documents/GitHub/DGG/src/templates/Game.vue")
+const c2 = () => import(/* webpackChunkName: "page--src--templates--category-vue" */ "/home/chris/Documents/GitHub/DGG/src/templates/Category.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/home/chris/Documents/GitHub/DGG/src/pages/About.vue")
+const c4 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/home/chris/Documents/GitHub/DGG/node_modules/gridsome/app/pages/404.vue")
+const c5 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/home/chris/Documents/GitHub/DGG/src/pages/Index.vue")
 
 export default [
   {
