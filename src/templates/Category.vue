@@ -53,6 +53,10 @@ export default {
 query ($id: ID!) {
   category(id: $id) {
     name
+    attachments {
+      url
+      filename
+    }
     belongsTo {
       totalCount
       edges {

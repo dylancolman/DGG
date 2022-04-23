@@ -5,7 +5,7 @@
     </h2>
     <ul
       v-if="data.length"
-      class="categories list-none grid grid-cols-3 gap-10 mt-5 mb-15"
+      class="categories list-none grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10 mt-5 mb-15"
     >
       <li
         v-for="edge in data"
