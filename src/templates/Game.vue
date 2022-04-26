@@ -36,9 +36,13 @@
                         <h2 class="mb-3">Rules</h2>
                         <div v-html="$page.game.rules" class="whitespace-pre-wrap prose-lg prose-yellow max-w-3xl"></div>
                     </div>
-                    <div v-if="$page.game.tips.length" class="mt-5">
+                    <div v-if="$page.game.tipsBackup.length" class="mt-5">
                         <h2 class="mb-3">Tips</h2>
-                        <div v-html="$page.game.tips" class=""></div>
+                        <ul class="list-disc ml-4">
+                            <li v-for="tip in $page.game.tipsBackup" :key="tip.id">
+                                {{ tip.tip }}
+                            </li>
+                        </ul>
                     </div>
                 </div>
           </div>
@@ -82,6 +86,10 @@ query Game ($path: String) {
         maxPlayers
         recommendedPlayers
         tips
+        tipsBackup {
+          id
+          tip
+        }
 	}
 }
 </page-query>

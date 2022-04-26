@@ -1,6 +1,7 @@
 
 module.exports = {
   siteName: 'DrinkingGames.guide',
+  siteUrl: 'https://drinkinggamesguide.vercel.app',
   permalinks: {
     trailingSlash: false,
   },
@@ -19,6 +20,11 @@ module.exports = {
                   fieldName: 'Category',
                   typeName: 'Category',
                   linkToFirst: true
+                },
+                {
+                  fieldName: 'TipsBackup',
+                  typeName: 'Tip',
+                  linkToFirst: false
                 }
               ]
           },
@@ -32,7 +38,18 @@ module.exports = {
                 linkToFirst: true, // optional
               },
             ]
-        }
+          },
+          {
+            name: 'Tips',
+            typeName: 'Tip',
+            links: [
+              {
+                fieldName: "Game",
+                typeName: "Game",
+                linkToFirst: false, // optional
+              },
+            ]
+          }
         ]
       }
     },
