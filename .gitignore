@@ -1,5 +1,8 @@
-.env
-node_modules
+*.log
 .cache
+.DS_Store
+node_modules
+dist
+.env
+.env.*
 yarn.lock
-.temp
