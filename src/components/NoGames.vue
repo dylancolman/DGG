@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-start justify-start h-full">
+  <div class="flex items-start justify-start h-full mt-10">
     <div class="flex flex-1 flex-row bg-white shadow-xl rounded-md overflow-hidden p-20">
       <div class="w-40 h-40 lg:mr-10">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -79,14 +79,14 @@
           </g>
         </svg>
       </div>
-      <div class="flex-1">
-        <h3 class="text-4xl font-bold">Can't find the plant you're looking for?</h3>
-        <p class="text-xl mt-6 block">
-          Help us grow the database by submitting new games or modifying existing ones.
+        <h3 class="text-4xl font-bold text-black">Can't find the plant you're looking for?</h3>
+      <div class="flex gap-10">
+        <p class="text-xl mt-6 block text-black">
+          Help us grow the database by <a href="mailto:dylancolman93@gmail.com">emailing me</a> with new games or modifying existing ones.
         </p>
-        <g-link to="/add" class="underline text-2xl text-blue-700 mt-6 block"
+        <!-- <g-link to="/add" class="underline text-2xl text-blue-700 mt-6 block"
           >Submit the game here</g-link
-        >
+        > -->
       </div>
     </div>
   </div>
