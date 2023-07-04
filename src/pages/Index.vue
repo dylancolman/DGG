@@ -28,7 +28,7 @@
         </form>
       </div>
     </div>
-    <div v-if="$page.games.edges">
+    <div v-if="filteredGames">
       <IndexGrid :data="filteredGames" />
     </div>
     <footer>
@@ -52,6 +52,7 @@
           description
           duration
           rules
+          items
           minPlayers
           maxPlayers
           recommendedPlayers
@@ -82,7 +83,7 @@ import CategoryList from "~/components/CategoryList.vue";
 export default {
   metaInfo () {
     return this.$seo({
-      title: 'Drinking Games', // Uses the titleTemplate in Gridsome config
+      title: 'Drinking Games',
       description: '',
       keywords: 'drinking games,games',
       openGraph: {
@@ -93,8 +94,8 @@ export default {
         title: 'DrinkingGames.guide',
         type: 'summary'
       },
-      link: [],   // any links
-      script: []  // any scripts
+      link: [],
+      script: []
     })
   },
   components: {
@@ -114,18 +115,20 @@ export default {
     lowerCase,
   },
   computed: {
-    gameList() {
-      return this.$page.games.edges;
+    gamesList() {
+        return this.$page.games.edges;
     },
     filteredGames() {
-      const gameSearch = this.gameSearch.toLowerCase().trim();
-      let result = this.gameList.filter((edge) => {
-        return (
-          edge.node.name.toLowerCase().trim().includes(gameSearch)
-        );
-      });
-
-      return result;
+      const query = this.gameSearch.toLowerCase().trim();
+      if (query === '') {
+        return this.gamesList;
+      } else {
+        return this.gamesList.filter(edge => {
+          const nameMatch = edge.node.name.toLowerCase().includes(query);
+          const itemsMatch = edge.node.items.some(item => item.toLowerCase().includes(query));
+          return nameMatch || itemsMatch;
+        });
+      }
     }
   }
 }
