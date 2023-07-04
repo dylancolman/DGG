@@ -23,7 +23,7 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
-  background: #0A0B0E;
+  background: #000;
   color: #fff;
 }
 
@@ -45,7 +45,7 @@ h2 {
     color: #ccc;
 }
 .section-title span {
-    background: #0A0B0E;
+    background: #000;
     padding: 5px;
     position: relative;
     z-index: 2;
