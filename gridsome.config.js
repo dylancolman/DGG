@@ -1,7 +1,7 @@
 
 module.exports = {
   siteName: 'DrinkingGames.guide',
-  siteUrl: 'https://drinkinggamesguide.vercel.app',
+  siteUrl: 'https://drinkinggames.guide',
   permalinks: {
     trailingSlash: false,
   },
@@ -10,7 +10,7 @@ module.exports = {
       use: '@gridsome/source-airtable',
       options: {
         apiKey: process.env.GRIDSOME_AIRTABLE_KEY,
-        base: process.env.GRIDSOME_AIRTABLE_DEV_BASE,
+        base: process.env.GRIDSOME_AIRTABLE_BASE,
         tables: [
           {
               name: 'Games',
