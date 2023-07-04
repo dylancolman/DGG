@@ -2,28 +2,18 @@
   <Layout>
     <CategoryList :data="$page.categories.edges" />
     <div>
+      <h2 class="mb-5">Search our database of {{$page.games.edges.length}} drinking games!</h2>
       <div class="flex flex-row md:space-x-5 md:items-stretch bg-yellow-400 p-4 rounded-md">
-        <form
-          class="flex-grow rounded-md overflow-hidden leading-none"
-        >
+        <form class="flex-grow rounded-md overflow-hidden leading-none">
           <input
             name="search"
             aria-label="Search"
             v-model="gameSearch"
             autocomplete="off"
-            class="hidden md:block bg-none appearance-none rounded-md focus:outline-none focus:text-black w-full px-5 py-3 h-full text-xl"
+            class="block bg-none appearance-none rounded-md focus:outline-none focus:text-black w-full px-5 py-3 h-full text-xl"
             type="search"
-            :placeholder="`Search our growing database of ${$page.games.edges.length} drinking games`"
+            placeholder="Type a game name or items you have available..."
             autofocus
-          />
-          <input
-            name="search"
-            aria-label="Search"
-            v-model="gameSearch"
-            autocomplete="off"
-            class="block md:hidden bg-none appearance-none rounded-md focus:outline-none focus:text-black w-full px-5 pb-0 h-12 md:h-16 text-xl"
-            type="search"
-            :placeholder="`Search ${$page.games.edges.length} games`"
           />
         </form>
       </div>
